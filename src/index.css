@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown-content {
+  @apply prose prose-sm prose-slate max-w-none;
+}
+
+/* Dark mode styles for AI messages */
+.markdown-content.ai-message {
+  @apply prose-headings:text-gray-800
+         prose-p:text-gray-700
+         prose-strong:text-gray-800
+         prose-ul:text-gray-700
+         prose-ol:text-gray-700
+         prose-pre:bg-gray-100
+         prose-code:text-gray-800
+         prose-th:text-gray-800
+         prose-td:text-gray-700;
+}
+
+/* Light mode styles for user messages */
+.markdown-content.user-message {
+  @apply prose-headings:text-white
+         prose-p:text-white
+         prose-strong:text-white
+         prose-ul:text-white
+         prose-ol:text-white
+         prose-pre:bg-indigo-700
+         prose-code:text-white
+         prose-th:text-white
+         prose-td:text-white;
+}
+
+.markdown-content pre {
+  @apply rounded-lg overflow-x-auto;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-gray-200 pl-4 italic;
+}
+
+.markdown-content table {
+  @apply border-collapse;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border border-gray-200 px-2 py-1;
+}
+
+.markdown-content th {
+  @apply bg-gray-50 font-bold;
+}
